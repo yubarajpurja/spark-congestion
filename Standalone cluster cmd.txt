@@ -1,0 +1,17 @@
+
+# Deploying Master node 
+cd %SPARK_HOME%
+bin\spark-class2.cmd org.apache.spark.deploy.master.Master
+
+# Spark_UI
+http://localhost:8080/
+
+#Deploying Worker Node
+cd %SPARK_HOME%
+bin\spark-class2.cmd org.apache.spark.deploy.worker.Worker -c 1 -m 4G spark://10.240.100.132:7077
+
+
+# Run Python application
+python "C:\Users\yubar\OneDrive\Desktop\Spark_CongestionPrediction.py"
+
+
